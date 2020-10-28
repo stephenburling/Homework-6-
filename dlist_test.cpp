@@ -13,10 +13,7 @@ struct Record {
 
 int main() {
 
-    Dlist<double> stack;
-    CalcDriver(stack);
-
-    /*
+    
     Dlist<Record*> catsweb; //records are big, so store pointer
 
     Record* p = new Record;
@@ -53,6 +50,6 @@ int main() {
         cout << r->uniqname << endl;
         delete r;
     }
-*/
+
     return 0;
 }
