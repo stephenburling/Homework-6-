@@ -140,7 +140,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="altnew.cpp" />
+    <ClCompile Include="calc.cpp" />
+    <ClCompile Include="calc_test.cpp" />
     <ClCompile Include="call.cpp" />
+    <ClCompile Include="call_test.cpp" />
     <ClCompile Include="dlist_test.cpp" />
   </ItemGroup>
   <ItemGroup>
