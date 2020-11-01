@@ -149,9 +149,18 @@ void Dlist<T>::InsertFront(const T& o) {
 
     new_node->o = o;
 
-    new_node->next = first;
+    if (IsEmpty()) {
+        first = new_node;
+        last = new_node;
+    }
+    else {
+        new_node->next = first;
 
-    first = new_node;
+        first->prev = new_node;
+
+        first = new_node;
+    }
+
 
 }
 

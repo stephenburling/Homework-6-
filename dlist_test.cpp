@@ -15,31 +15,31 @@ int main() {
 
     
     Dlist<Record*> catsweb; //records are big, so store pointer
-    /*
+    
     Record* p = new Record;
     p->name = "Andrew DeOrio";
     p->uniqname = "First Name";
     p->job = FACULTY;
-    catsweb.InsertBack(p);
+    catsweb.InsertFront(p);
 
     Record* y = new Record;
     y->name = "Andrew ";
     y->uniqname = "Second Name";
     y->job = FACULTY;
-    catsweb.InsertBack(y);
+    catsweb.InsertFront(y);
 
     Record* x = new Record;
     x->name = "Andrew DeOrio";
     x->uniqname = "Third Name";
     x->job = FACULTY;
-    catsweb.InsertBack(x);
+    catsweb.InsertFront(x);
 
     Record* q = new Record;
     q->name = "Andrew DeOrio";
     q->uniqname = "Fourth Name";
     q->job = FACULTY;
-    catsweb.InsertBack(q);
-*/
+    catsweb.InsertFront(q);
+
     // do something with "catsweb"
     Dlist<Record*> temp_catsweb = catsweb;
     temp_catsweb = temp_catsweb;
