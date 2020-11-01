@@ -98,9 +98,9 @@ Dlist<T>& Dlist<T>::operator=(const Dlist& l) {
     if (this != &l) {
         RemoveAll();
         CopyAll(l);
-        return *this;
     }   
-    std::cout << "This was equal to l." << std::endl;
+
+    return *this;
 }
 
 template <typename T>

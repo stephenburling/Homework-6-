@@ -43,6 +43,8 @@ int main() {
     // do something with "catsweb"
     Dlist<Record*> temp_catsweb = catsweb;
     temp_catsweb = temp_catsweb;
+    temp_catsweb = catsweb;
+    temp_catsweb = temp_catsweb;
     //string temp = p->name;
 
     // don't forget to delete objects on the heap
