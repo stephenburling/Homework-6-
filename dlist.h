@@ -95,8 +95,11 @@ Dlist<T>::~Dlist() {
 
 template <typename T>
 Dlist<T>& Dlist<T>::operator=(const Dlist& l) {
-    RemoveAll();
-    CopyAll(l);
+    if (!IsEmpty) {
+        RemoveAll();
+        CopyAll(l);
+    }
+    
     return *this;
 }
 
