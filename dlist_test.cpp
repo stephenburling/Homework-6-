@@ -21,7 +21,7 @@ int main() {
     p->uniqname = "First Name";
     p->job = FACULTY;
     catsweb.InsertFront(p);
-
+    /*
     Record* y = new Record;
     y->name = "Andrew ";
     y->uniqname = "Second Name";
@@ -39,7 +39,7 @@ int main() {
     q->uniqname = "Fourth Name";
     q->job = FACULTY;
     catsweb.InsertFront(q);
-
+*/
     // do something with "catsweb"
     Dlist<Record*> temp_catsweb = catsweb;
     temp_catsweb = temp_catsweb;
@@ -49,7 +49,7 @@ int main() {
 
     // don't forget to delete objects on the heap
     while (!temp_catsweb.IsEmpty()) {
-        Record* r = temp_catsweb.RemoveBack();
+        Record* r = temp_catsweb.RemoveFront();
         cout << r->uniqname << endl;
         delete r;
     }

@@ -146,7 +146,7 @@ template <typename T>
 void Dlist<T>::InsertFront(const T& o) {
 
     node* new_node = new node();
-
+    
     new_node->o = o;
 
     if (IsEmpty()) {
@@ -193,17 +193,20 @@ T Dlist<T>::RemoveFront() {
         emptyList e;
         throw e;
     }
-    else {
-        node* temp_node = first;
+    node* node_to_delete = first;
+    first = first->next;
 
-        T other_temp = first->o;
-
-        first = first->next;
-
-        delete temp_node;
-
-        return other_temp;
+    if (!first) {
+        MakeEmpty();
     }
+    else {
+        first->prev = nullptr;
+    }
+
+    T object = node_to_delete->o;
+    delete node_to_delete;
+
+    return object;
 }
 
 template <typename T>
