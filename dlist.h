@@ -95,12 +95,12 @@ Dlist<T>::~Dlist() {
 
 template <typename T>
 Dlist<T>& Dlist<T>::operator=(const Dlist& l) {
-    if (!IsEmpty) {
+    if (this != &l) {
         RemoveAll();
         CopyAll(l);
-    }
-    
-    return *this;
+        return *this;
+    }   
+    std::cout << "This was equal to l." << std::endl;
 }
 
 template <typename T>

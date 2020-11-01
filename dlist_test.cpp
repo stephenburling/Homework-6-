@@ -15,7 +15,7 @@ int main() {
 
     
     Dlist<Record*> catsweb; //records are big, so store pointer
-
+    /*
     Record* p = new Record;
     p->name = "Andrew DeOrio";
     p->uniqname = "First Name";
@@ -39,10 +39,11 @@ int main() {
     q->uniqname = "Fourth Name";
     q->job = FACULTY;
     catsweb.InsertBack(q);
-
+*/
     // do something with "catsweb"
     Dlist<Record*> temp_catsweb = catsweb;
-    string temp = p->name;
+    temp_catsweb = temp_catsweb;
+    //string temp = p->name;
 
     // don't forget to delete objects on the heap
     while (!temp_catsweb.IsEmpty()) {
