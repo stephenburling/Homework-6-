@@ -151,7 +151,7 @@ void Reverse(Dlist<double>& stack) {
 void Print(Dlist<double>& stack) {
     try {
         int operand1 = stack.RemoveFront();
-        std::cout << operand1 << " called print\n";
+        std::cout << operand1 << "\n";
         stack.InsertFront(operand1);
     }
     catch (emptyList err) {
@@ -170,9 +170,9 @@ void PrintAll(Dlist<double>& stack) {
 
     while (!temp_list.IsEmpty()) {
         int operand = temp_list.RemoveFront();
-        std::cout << operand << " ";
+        std::cout << operand << "\n";
     }
-    std::cout << "called print all\n";
+    std::cout << "\n";
 }
 
 void CalcDriver() {
