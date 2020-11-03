@@ -175,7 +175,8 @@ void PrintAll(Dlist<double>& stack) {
     std::cout << std::endl;
 }
 
-void CalcDriver(Dlist<double>& stack) {
+void CalcDriver() {
+    Dlist<double> stack;
     std::string input_line;
     std::cin >> input_line;
 
@@ -221,4 +222,9 @@ void CalcDriver(Dlist<double>& stack) {
         // check for bad input
         std::cin >> input_line;
     }
+}
+
+int main() {
+    CalcDriver();
+    return 0;
 }
