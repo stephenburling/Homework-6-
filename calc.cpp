@@ -170,9 +170,13 @@ void PrintAll(Dlist<double>& stack) {
 
     while (!temp_list.IsEmpty()) {
         int operand = temp_list.RemoveFront();
-        std::cout << operand << "\n";
+        std::cout << operand;
+
+        if (!temp_list.IsEmpty()) {
+            std::cout << " ";
+        }
     }
-    std::cout << "\n";
+    std::cout << "end\n";
 }
 
 void CalcDriver() {
