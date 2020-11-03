@@ -32,7 +32,6 @@ int CallReader(Dlist<Member>& caller_queue, int caller_duration, std::string nam
         ticks++;
         std::cout << "Starting tick #" << ticks << std::endl;
     }
-      
     return ticks;
 }
 
