@@ -21,9 +21,14 @@ bool IsValidOperator(std::string input_line) {
 }
 
 bool IsValidOperand(std::string input_line) {
-    int last_index = input_line.size() - 1;
+    try {
+        stod(input_line);
+    }
+    catch (std::invalid_argument err) {
+        return false;
+    }
 
-    if (input_line < "0" || input_line > "9") {
+    if (stod(input_line) < 0 || stod(input_line) > 9) {
         return false;
     }
     else {
