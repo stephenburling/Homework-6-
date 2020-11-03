@@ -176,7 +176,7 @@ void PrintAll(Dlist<double>& stack) {
             std::cout << " ";
         }
     }
-    std::cout << "end\n";
+    std::cout << "\n";
 }
 
 void CalcDriver() {
