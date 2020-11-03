@@ -4,7 +4,7 @@
 
 void CallDriver(){
     std::string input;
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < 20; i++) {
         std::cin >> input;
         std::cout << input << std::endl;
     }
