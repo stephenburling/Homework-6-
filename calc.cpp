@@ -20,6 +20,7 @@ bool IsValidOperator(std::string input_line) {
         return false;
     }
 }
+
 bool IsValidOperand(std::string input_line) {
     int last_index = input_line.size() - 1;
 
@@ -29,7 +30,6 @@ bool IsValidOperand(std::string input_line) {
     else {
         return true;
     }
-
 }
 
 void AddFunc(Dlist<double>& stack) {
@@ -90,10 +90,10 @@ void DivFunc(Dlist<double>& stack) {
     try {
         double operand1 = stack.RemoveFront();
         if (operand1 == 0) {
-            std::cout << "Divide by zero\n" << "\n";
+            std::cout << "Divide by zero\n";
         }
         else if (stack.IsEmpty()) {
-            std::cout << "Not enough operands" << "\n";
+            std::cout << "Not enough operands\n";
             stack.InsertFront(operand1);
         }else {
             double operand2 = stack.RemoveFront();
@@ -102,7 +102,7 @@ void DivFunc(Dlist<double>& stack) {
         }
     }
     catch (emptyList err) {
-        std::cout << "Not enough operands" << "\n";
+        std::cout << "Not enough operands\n";
     }
 }
 
@@ -114,7 +114,7 @@ void Negate(Dlist<double>& stack) {
         stack.InsertFront(result);
     }
     catch (emptyList err) {
-        std::cout << "Not enough operands" << "\n";
+        std::cout << "Not enough operands\n";
     }
 }
 
@@ -126,7 +126,7 @@ void Duplicate(Dlist<double>& stack) {
     }
     catch (emptyList err) {
         
-        std::cout << "Not enough operands" << "\n";
+        std::cout << "Not enough operands\n";
     }
 }
 
@@ -134,7 +134,7 @@ void Reverse(Dlist<double>& stack) {
     try {
         double operand1 = stack.RemoveFront();
         if (stack.IsEmpty()) {
-            std::cout << "Not enough operands" << "\n";
+            std::cout << "Not enough operands\n";
             stack.InsertFront(operand1);
         }
         else{
@@ -144,18 +144,18 @@ void Reverse(Dlist<double>& stack) {
         }
     }
     catch (emptyList err) {
-        std::cout << "Not enough operands" << "\n";
+        std::cout << "Not enough operands\n";
     }
 }
 
 void Print(Dlist<double>& stack) {
     try {
         int operand1 = stack.RemoveFront();
-        std::cout << operand1 << "\n";
+        std::cout << operand1 << " called print\n";
         stack.InsertFront(operand1);
     }
     catch (emptyList err) {
-        std::cout << "Not enough operands" << "\n";
+        std::cout << "Not enough operands\n";
     }
 }
 
@@ -172,7 +172,7 @@ void PrintAll(Dlist<double>& stack) {
         int operand = temp_list.RemoveFront();
         std::cout << operand << " ";
     }
-    std::cout << "\n";
+    std::cout << "called print all\n";
 }
 
 void CalcDriver() {

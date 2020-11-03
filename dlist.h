@@ -144,7 +144,6 @@ bool Dlist<T>::IsEmpty() const {
 
 template <typename T>
 void Dlist<T>::InsertFront(const T& o) {
-
     node* new_node = new node();
     
     new_node->o = o;
@@ -160,13 +159,10 @@ void Dlist<T>::InsertFront(const T& o) {
 
         first = new_node;
     }
-
-
 }
 
 template <typename T>
 void Dlist<T>::InsertBack(const T& o) {
-
     node* new_node = new node();
 
     new_node->o = o;
@@ -182,8 +178,6 @@ void Dlist<T>::InsertBack(const T& o) {
 
         last = new_node;
     }
-
-
 }
 
 template <typename T>
