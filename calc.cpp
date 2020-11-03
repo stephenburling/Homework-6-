@@ -36,7 +36,7 @@ void AddFunc(Dlist<double>& stack) {
     try {
         double operand1 = stack.RemoveFront();
         if (stack.IsEmpty()) {
-            std::cout << "Not enough operands." << std::endl;
+            std::cout << "Not enough operands" << std::endl;
             stack.InsertFront(operand1);
         }
         else {
@@ -46,7 +46,7 @@ void AddFunc(Dlist<double>& stack) {
         }
     }
     catch (emptyList err) {
-        std::cout << "Not enough operands." << std::endl;
+        std::cout << "Not enough operands" << std::endl;
     }
 }
 
@@ -54,7 +54,7 @@ void SubFunc(Dlist<double>& stack) {
     try {
         double operand1 = stack.RemoveFront();
         if (stack.IsEmpty()) {
-            std::cout << "Not enough operands." << std::endl;
+            std::cout << "Not enough operands" << std::endl;
             stack.InsertFront(operand1);
         }
         else {
@@ -64,7 +64,7 @@ void SubFunc(Dlist<double>& stack) {
         }
     }
     catch (emptyList err) {
-        std::cout << "Not enough operands." << std::endl;
+        std::cout << "Not enough operands" << std::endl;
     }
 }
 
@@ -72,7 +72,7 @@ void MultFunc(Dlist<double>& stack) {
     try {
         double operand1 = stack.RemoveFront();
         if (stack.IsEmpty()) {
-            std::cout << "Not enough operands." << std::endl;
+            std::cout << "Not enough operands" << std::endl;
             stack.InsertFront(operand1);
         }
         else {
@@ -82,7 +82,7 @@ void MultFunc(Dlist<double>& stack) {
         }
     }
     catch (emptyList err) {
-        std::cout << "Not enough operands." << std::endl;
+        std::cout << "Not enough operands" << std::endl;
     }
 }
 
@@ -93,7 +93,7 @@ void DivFunc(Dlist<double>& stack) {
             std::cout << "Divide by zero\n" << std::endl;
         }
         else if (stack.IsEmpty()) {
-            std::cout << "Not enough operands." << std::endl;
+            std::cout << "Not enough operands" << std::endl;
             stack.InsertFront(operand1);
         }else {
             double operand2 = stack.RemoveFront();
@@ -102,7 +102,7 @@ void DivFunc(Dlist<double>& stack) {
         }
     }
     catch (emptyList err) {
-        std::cout << "Not enough operands." << std::endl;
+        std::cout << "Not enough operands" << std::endl;
     }
 }
 
@@ -114,7 +114,7 @@ void Negate(Dlist<double>& stack) {
         stack.InsertFront(result);
     }
     catch (emptyList err) {
-        std::cout << "Not enough operands." << std::endl;
+        std::cout << "Not enough operands" << std::endl;
     }
 }
 
@@ -126,7 +126,7 @@ void Duplicate(Dlist<double>& stack) {
     }
     catch (emptyList err) {
         
-        std::cout << "Not enough operands." << std::endl;
+        std::cout << "Not enough operands" << std::endl;
     }
 }
 
@@ -134,7 +134,7 @@ void Reverse(Dlist<double>& stack) {
     try {
         double operand1 = stack.RemoveFront();
         if (stack.IsEmpty()) {
-            std::cout << "Not enough operands." << std::endl;
+            std::cout << "Not enough operands" << std::endl;
             stack.InsertFront(operand1);
         }
         else{
@@ -144,7 +144,7 @@ void Reverse(Dlist<double>& stack) {
         }
     }
     catch (emptyList err) {
-        std::cout << "Not enough operands." << std::endl;
+        std::cout << "Not enough operands" << std::endl;
     }
 }
 
@@ -155,7 +155,7 @@ void Print(Dlist<double>& stack) {
         stack.InsertFront(operand1);
     }
     catch (emptyList err) {
-        std::cout << "Not enough operands." << std::endl;
+        std::cout << "Not enough operands" << std::endl;
     }
 }
 
