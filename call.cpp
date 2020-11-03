@@ -19,7 +19,12 @@ int CallReader(Dlist<Member>& caller_queue, int caller_duration, std::string nam
                 new_list.InsertBack(current_member);
             }
             else {
-                std::cout << "Call from " << current_member.name << " a " << current_member.level << " member" << std::endl;
+                if (current_member.level == "none") {
+                    std::cout << "Call from " << current_member.name << " a regular member" << std::endl;
+                }
+                else {
+                    std::cout << "Call from " << current_member.name << " a " << current_member.level << " member" << std::endl;
+                }
             }
             if (caller_queue.IsEmpty()) {
                 caller_queue = new_list;
@@ -99,9 +104,14 @@ int main() {
     for (int i = 0; i < stoi(number_of_calls); i++) {
         Member new_member;
         std::cin >> new_member.number_of_ticks;
+        std::cout << new_member.number_of_ticks << std::endl;
         std::cin >> new_member.name;
+        std::cout << new_member.name << std::endl;
         std::cin >> new_member.level;
+        std::cout << new_member.level << std::endl;
         std::cin >> new_member.call_duration;
+        std::cout << new_member.call_duration << std::endl;
+
         member_stack.InsertFront(new_member);
     }
 
