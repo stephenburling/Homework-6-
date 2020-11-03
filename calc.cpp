@@ -21,7 +21,6 @@ bool IsValidOperator(std::string input_line) {
     }
 }
 bool IsValidOperand(std::string input_line) {
-
     int last_index = input_line.size() - 1;
 
     if (input_line < "0" || input_line > "9") {
@@ -135,7 +134,7 @@ void Reverse(Dlist<double>& stack) {
     try {
         double operand1 = stack.RemoveFront();
         if (stack.IsEmpty()) {
-            std::cout << "Not enough operands" << std::endl;
+            std::cout << "Not enough operands." << std::endl;
             stack.InsertFront(operand1);
         }
         else{
@@ -222,13 +221,4 @@ void CalcDriver(Dlist<double>& stack) {
         // check for bad input
         std::cin >> input_line;
     }
-}
-
-int main() {
-    
-    Dlist<double> new_stack;
-
-    CalcDriver(new_stack);
-
-    return 0;
 }
